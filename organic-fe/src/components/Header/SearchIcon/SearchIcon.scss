@@ -1,0 +1,22 @@
+.search-icon {
+  max-width: 250px;
+  border-radius: 2.25rem;
+  background: #FAFAFA;
+  display: flex;
+  justify-content: flex-end;
+
+  &__icon-wrapper {
+    background-color: #7EB693;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    img {
+      width: 21px;
+      height: 21px;
+    }
+  }
+}

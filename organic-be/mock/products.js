@@ -17,7 +17,7 @@ const products = [
     price: 0.49,
     discount: 5,
     imgUrl: "https://5.imimg.com/data5/SELLER/Default/2022/12/EK/NP/CN/49293026/fresh-banana-fruit.webp",
-    category: "fruit",
+    category: "fresh",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ const products = [
     price: 7.99,
     discount: 15,
     imgUrl: "https://ed910ae2d60f0d25bcb8-80550f96b5feb12604f4f720bfefb46d.ssl.cf1.rackcdn.com/8287_DryRoastedMacad-pHDq-72d.jpg",
-    category: "snack",
+    category: "millets",
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const products = [
     price: 3.49,
     discount: 5,
     imgUrl: "https://harkola.online/wp-content/uploads/2017/01/MUNG-BEANS.jpg",
-    category: "legume",
+    category: "health",
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ const products = [
     price: 9.99,
     discount: 10,
     imgUrl: "https://m.media-amazon.com/images/I/71jWLuaVXBL._AC_UF894,1000_QL80_.jpg",
-    category: "nut",
+    category: "nuts",
   },
   {
     id: 6,
@@ -67,7 +67,7 @@ const products = [
     price: 2.49,
     discount: 0,
     imgUrl: "https://kidseatincolor.com/wp-content/uploads/2022/02/eggs-e1648216350119-500x500.jpeg",
-    category: "dairy",
+    category: "fresh",
   },
   {
     id: 7,
@@ -77,7 +77,7 @@ const products = [
     price: 4.99,
     discount: 20,
     imgUrl: "https://5.imimg.com/data5/SV/WQ/YT/SELLER-15424061/white-rusk-500x500.jpg",
-    category: "snack",
+    category: "fresh",
   },
   {
     id: 8,
@@ -97,7 +97,7 @@ const products = [
     price: 11.99,
     discount: 15,
     imgUrl: "https://vimanfoods.net/wp-content/uploads/2021/05/hazelnut.jpg",
-    category: "nut",
+    category: "nuts",
   },
   {
     id: 10,
@@ -107,7 +107,7 @@ const products = [
     price: 1.99,
     discount: 0,
     imgUrl: "https://agro-atom.com.ua/wp-content/uploads/2019/12/p2.jpg",
-    category: "vegetable",
+    category: "fresh",
   },
   {
     id: 11,
@@ -117,7 +117,7 @@ const products = [
     price: 6.79,
     discount: 10,
     imgUrl: "https://nwwildfoods.com/cdn/shop/products/raw-organic-almonds.jpg?v=1674424072",
-    category: "nut",
+    category: "fresh",
   },
   {
     id: 12,
@@ -157,6 +157,7 @@ const products = [
     price: 1.49,
     discount: 5,
     imgUrl: "https://promisedlandproduce.com.au/cdn/shop/products/Cabbage_-_Green_436939186_1.jpg?v=1605724670",
+    category: "vegetable",
   }
 ]
 

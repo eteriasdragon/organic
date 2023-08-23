@@ -1,0 +1,69 @@
+.subscribe {
+
+  &__inner-container {
+    background-image: url("./src/assets/footer/subscribe-form.png");
+    background-repeat: no-repeat;
+    border-radius: 1.875rem;
+    height: 300px;
+    max-width: 1350px;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  margin: 0 auto 100px;
+
+  &__slogan {
+    color: #FFF;
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    width: 25%;
+    margin-left: 50px;
+  }
+}
+
+.subscribe-form {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  gap: 10px;
+
+  &__input {
+    border-radius: 1rem;
+    background: #FFF;
+    outline: none;
+    border: none;
+    flex: 1 1 30%;
+    max-width: 350px;
+    height: 80px;
+    box-sizing: border-box;
+    padding-left: 25px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.125rem;
+
+    &::placeholder {
+      font-style: italic;
+      color: #ABABAB;
+      font-family: "Roboto", sans-serif;
+      font-size: 1.125rem;
+      line-height: normal;
+    }
+  }
+
+  & .button {
+    max-width: 200px;
+    height: 80px;
+    border-radius: 1rem;
+    background: #274C5B;
+    flex: 1 1 20%;
+    color: #FFF;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+}
