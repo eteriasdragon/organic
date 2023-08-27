@@ -1,0 +1,23 @@
+.news-section {
+  padding: 170px 0 250px;
+
+  &__inner-container {
+    position: relative;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+  }
+  &__heading {
+    width: 60%;
+  }
+
+  &__news-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+}

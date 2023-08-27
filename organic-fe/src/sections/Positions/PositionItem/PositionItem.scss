@@ -1,0 +1,24 @@
+.position-item {
+  background-repeat: no-repeat;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background: #FFF;
+    color: #274C5B;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 320px;
+    width: 50%;
+    height: 50%;
+    max-height: 100px;
+  }
+}

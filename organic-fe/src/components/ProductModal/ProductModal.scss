@@ -1,0 +1,188 @@
+.portal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 10;
+  padding: 100px 0;
+  text-align: left;
+
+  &__close-btn {
+    width: 60px;
+    height: 35px;
+    border-radius: 1rem;
+    background-color: #274C5B;
+    color: #fff;
+    text-align: center;
+    line-height: 2;
+    position: absolute;
+    top: 80px;
+    right: 10%;
+    transition: .3s;
+
+    &:hover {
+      box-shadow: 0 0 1px 1px #9a9a9a;
+    }
+  }
+}
+
+.product-modal {
+  margin: 0 auto;
+
+  &__category {
+    display: inline-flex;
+    padding: 0 10px;
+    height: 35px;
+    line-height: 2;
+    text-align: center;
+    border-radius: 0.5rem;
+    background-color: #274C5B;
+    color: #FFF;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  &__visual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 100px;
+  }
+  &__img-wrapper {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+
+  &__img {
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  &__info {
+    flex: 1 1 30%;
+    max-width: 60%;
+  }
+
+  &__name {
+    color: #274C5B;
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+  }
+
+  &__rating {
+    margin-bottom: 15px;
+
+    & img {
+      width: 16px;
+      height: 16px;
+      filter: brightness(0) saturate(100%) invert(84%) sepia(68%) saturate(4671%) hue-rotate(335deg) brightness(100%) contrast(95%);
+    }
+
+  }
+
+  &__price-wrapper {
+    margin-bottom: 30px;
+
+    .product-card__price-amount {
+      font-size: 1.5625rem;
+    }
+
+    .product-card__price-amount--old {
+      font-size: 1.25rem;
+    }
+
+  }
+
+  &__descr {
+    color: #525C60;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 165.4%;
+    margin-bottom: 30px;
+  }
+
+  &__cart-control {
+    display: flex;
+    align-items: center;
+  }
+
+  &__cart-quantity {
+    color: #274C5B;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: normal;
+    margin: 25px;
+  }
+
+  &__cart-count {
+    width: 125px;
+    height: 80px;
+    border-radius: 1rem;
+    border: 2px solid #274C5B;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #274C5B;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: normal;
+    margin-right: 20px;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      appearance: none;
+      margin: 0;
+    }
+
+  }
+
+  &__cart-add {
+    &:hover {
+      background-color: #EFD372;
+    }
+  }
+
+  &__text-wrapper {
+    color: #525C60;
+    text-align: center;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165.4%;
+  }
+
+  &__text-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+
+    & .inactive {
+      background-color: #EFF6F1;
+      color: #274C5B;
+
+      &:hover {
+        border: 1px solid #274C5B;
+      }
+    }
+  }
+
+}

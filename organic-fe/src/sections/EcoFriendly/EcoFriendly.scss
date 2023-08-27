@@ -1,0 +1,37 @@
+.eco-section {
+  background-color: #fff;
+  padding: 100px 0;
+  position: relative;
+  &__img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 55%;
+  }
+  &__inner-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  &__content-wrapper {
+    position: relative;
+    z-index: 1;
+    padding: 80px 0 80px 100px;
+    width: 50%;
+    border-radius: 20px;
+    background-color: #fff;
+  }
+
+  &__subheading {
+    width: 100%;
+  }
+
+  &__heading {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__pros-list {
+  }
+}

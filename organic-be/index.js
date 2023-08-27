@@ -3,10 +3,14 @@ import cors from 'cors';
 import jwt from 'jsonwebtoken';
 import swaggerUi from'swagger-ui-express';
 import swaggerSpec from './swagger.js';
-import products from  "./mock/products.js";
 import mongoose from "mongoose";
+import { MongoClient, ServerApiVersion } from 'mongodb';
+import {getAllProducts} from "./helpers/products/getAllProducts.js";
+import Product from "./models/product.js";
 
 const app = express();
+const uri = `mongodb+srv://aethereal-dragon:QRNVUQeH0MhIQUFJ@cluster0.xlu38qm.mongodb.net/`;
+
 app.use(cors());
 app.use(express.json());
 
@@ -20,14 +24,24 @@ app.use('/api', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 //     }
 // })
 
-app.get('/products', function(req, res) {
-  res.send(products);
+export const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+
+app.get('/products', async function(req, res) {
+  const allProducts = await getAllProducts();
+  res.send(allProducts);
 });
 
 
 async function startServer() {
   try {
-    await mongoose.connect(`mongodb+srv://aethereal-dragon:QRNVUQeH0MhIQUFJ@cluster0.xlu38qm.mongodb.net/`);
+    await mongoose.connect(uri);
+    console.log("MongoDB connected")
     app.listen(3001,()=> {console.log('server was started!');})
   }
   catch (e) {
@@ -36,3 +50,4 @@ async function startServer() {
 }
 
 startServer()
+

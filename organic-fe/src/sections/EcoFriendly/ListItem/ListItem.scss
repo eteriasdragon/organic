@@ -1,0 +1,20 @@
+.pros-item {
+  margin-bottom: 35px;
+
+  &__title {
+    color: #274C5B;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  &__descr {
+    color: #525C60;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165.4%;
+  }
+}

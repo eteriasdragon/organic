@@ -1,0 +1,13 @@
+.positions-section {
+  background-color: #F1F8F4;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 180px 0;
+
+  .position-item {
+    max-width: 680px;
+    flex: 1 1 50%;
+    height: 500px;
+  }
+}
