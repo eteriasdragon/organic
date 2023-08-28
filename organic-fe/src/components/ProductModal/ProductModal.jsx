@@ -8,12 +8,20 @@ export default function ProductModal({product, closeModal, addToCart}) {
   const {addInfo, category, discount, price, imgUrl, mainInfo, name, rating, id} = product;
   const [activeInfo, setActiveInfo] = useState("main");
   const [cartCount, setCartCount] = useState(1);
+  const [status, setStatus] = useState('active');
+
+  const closingModalWindow = () => {
+    setStatus('inactive');
+    setTimeout(() => {
+      closeModal()
+    }, 300);
+  }
 
   return(
-    <div className="portal">
+    <div className={status + " portal"}>
       <div className="portal__inner-container">
         <div className="product-modal">
-          <button onClick={closeModal} className="portal__close-btn">X</button>
+          <button onClick={closingModalWindow} className="portal__close-btn">X</button>
           <div className="product-modal__category">{category}</div>
           <div className="product-modal__visual">
             <div className="product-modal__img-wrapper">
@@ -50,5 +58,7 @@ export default function ProductModal({product, closeModal, addToCart}) {
 
 ProductModal.propTypes = {
   product: PropTypes.object.isRequired,
+  closeModal: PropTypes.func.isRequired,
+  addToCart: PropTypes.func.isRequired,
 }
 

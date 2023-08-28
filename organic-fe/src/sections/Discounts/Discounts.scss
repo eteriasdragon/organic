@@ -1,0 +1,12 @@
+.discounts-section {
+  margin: 150px 0;
+  &__inner-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    & > div {
+      flex: 1 1 50%;
+      min-height: 300px;
+    }
+  }
+}

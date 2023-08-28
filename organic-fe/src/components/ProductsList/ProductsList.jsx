@@ -23,12 +23,13 @@ export default function ProductsList({productsArray, sortAmount}) {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    document.querySelector('body').style.overflow = "auto";
   }
 
   const openModal = (id) => {
-    console.log(5);
     setIsModalOpen(true);
     setSelectedProductId(id);
+    document.querySelector('body').style.overflow = "hidden";
   }
 
   const addToCart = () => {

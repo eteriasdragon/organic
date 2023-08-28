@@ -9,6 +9,13 @@
   padding: 100px 0;
   text-align: left;
 
+  &.active {
+    animation: appearing .3s linear forwards;
+  }
+  &.inactive {
+    animation: closing .3s linear forwards;
+  }
+
   &__close-btn {
     width: 60px;
     height: 35px;
@@ -183,6 +190,30 @@
         border: 1px solid #274C5B;
       }
     }
+  }
+
+}
+
+@keyframes appearing {
+
+  0% {
+    left: 100vw;
+  }
+
+  100% {
+    left: 0;
+  }
+
+}
+
+@keyframes closing {
+
+  0% {
+    left: 0;
+  }
+
+  100% {
+    left: 100vw;
   }
 
 }

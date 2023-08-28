@@ -1,0 +1,22 @@
+.hero-block {
+  width: 100%;
+  height: calc(100vh - 150px);
+  background: url("./src/assets/hero/hero-block-decore.png"), url("./src/assets/hero/hero-block.png");
+  background-size: cover, cover;
+
+  &__heading {
+    color: #274C5B;
+    font-size: 4.375rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+
+  &__inner-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}

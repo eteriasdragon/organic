@@ -1,0 +1,56 @@
+.about-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background-color: #FFF4CD;
+    position: absolute;
+    border-radius: 50%;
+    left: 16px;
+  }
+
+  &:nth-child(even) {
+    &:after {
+      left: 10px;
+      top: 50px;
+    }
+  }
+
+  &__img-wrapper {
+    min-width: 90px;
+    height: 90px;
+    border-radius: 1.25rem;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__img {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    color: #274C5B;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: #525C60;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165.4%;
+  }
+}

@@ -1,9 +1,18 @@
 import "./News.scss";
-import newsData from "./news-data.js";
 import NewsItem from "./NewsItem/NewsItem.jsx";
 import Button from "../../components/Button/Button.jsx";
+import {useDispatch, useSelector} from "react-redux";
+import {useEffect} from "react";
+import {getNews} from "../../redux/actions/products.js";
 
 export default function News () {
+  const newsData = useSelector((state) => state.news.newsArr);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getNews());
+  }, [dispatch]);
+
   return(
     <section className="news-section">
       <div className="news-section__inner-container">
@@ -15,9 +24,9 @@ export default function News () {
           <Button style="default--white" text="More News" />
         </div>
         <div className="news-section__news-list">
-          {newsData.map((item ,id) => {
+          {newsData ? newsData.map((item ,id) => {
             return <NewsItem key={id} date={item.date} backgroundUrl={item.backgroundUrl} author={item.author} text={item.text} title={item.title} />
-          })}
+          }) : ""}
         </div>
       </div>
     </section>
