@@ -6,6 +6,7 @@ import Logo from "../Logo/Logo.jsx";
 import "./Header.scss";
 
 export default function Header() {
+
   return (
     <header className="header">
       <div className="header__inner-container">
@@ -16,7 +17,7 @@ export default function Header() {
           })}
         </nav>
         <SearchIcon className="header__search"/>
-        <CartButton className="header__cart" count={3}/>
+        <CartButton className="header__cart"/>
       </div>
     </header>
   )

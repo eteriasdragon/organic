@@ -1,0 +1,44 @@
+.cart-list-section {
+  background-color: rgba(253, 176, 45, 0.16);
+  padding: 150px 0 55px;
+
+  &__inner-container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: #274C5B;
+    font-family: "Roboto", sans-serif;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+    width: 350px;
+    margin-left: auto;
+    margin-bottom: 50px;
+  }
+
+  &__summary-total {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__summary-discount {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  & button {
+    margin: 0 auto;
+
+    &:hover {
+      background-color: #19313b;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.custom-hero-section {
+  height: 47vh;
+  //background-size: contain;
+  background-repeat: no-repeat !important;
+  background-size: cover, cover;
+
+  &__inner-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__heading {
+    width: 100%;
+  }
+}

@@ -1,6 +1,3 @@
-import {useDispatch, useSelector} from "react-redux";
-import {useEffect} from "react";
-import {fetchAllProducts} from "../../redux/actions/products.js";
 import {
   HeroBlock,
   Discounts,
@@ -16,16 +13,18 @@ import WeOffer from "../../sections/WeOffer/WeOffer.jsx";
 
 
 export default function Home () {
-  return <main>
-    <HeroBlock/>
-    <Discounts />
-    <About />
-    <OurProducts />
-    <Testimonials />
-    <WeOffer category="vegetable" />
-    <EcoFriendly/>
-    <Positions />
-    <News />
-    <SubscribeForm />
-  </main>
+  return (
+    <main>
+      <HeroBlock/>
+      <Discounts />
+      <About />
+      <OurProducts />
+      <Testimonials />
+      <WeOffer category="vegetable" />
+      <EcoFriendly/>
+      <Positions />
+      <News />
+      <SubscribeForm />
+    </main>
+  )
 }

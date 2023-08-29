@@ -7,6 +7,7 @@ import {statistics} from "./reducers/statistics.js";
 import {discounts} from "./reducers/discounts.js";
 import {organicPros} from "./reducers/organic-pros.js";
 import {positions} from "./reducers/positions.js";
+import {cart} from "./reducers/cart.js";
 
 // Reducers
-export const rootReducer = combineReducers({products, news, about, reviews, statistics, discounts, organicPros, positions});
+export const rootReducer = combineReducers({products, news, about, reviews, statistics, discounts, organicPros, positions, cart});

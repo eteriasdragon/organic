@@ -1,0 +1,50 @@
+.alert {
+  position: fixed;
+  bottom: -40px;
+  left: 10px;
+  min-width: 300px;
+  height: 20px;
+  z-index: 500;
+  background-color: #7EB693;
+  padding: 10px 10px;
+  border-radius: 10px;
+  color: #274C5B;
+  display: flex;
+  justify-content: center;
+
+
+  &.active {
+    animation: appearing .3s linear forwards;
+  }
+  &.inactive {
+    animation: closing .3s linear forwards;
+  }
+}
+
+@keyframes appearing {
+
+  0% {
+    bottom: -40px;
+    opacity: 0;
+  }
+
+  100% {
+    bottom: 20px;
+    opacity: 1;
+  }
+
+}
+
+@keyframes closing {
+
+  0% {
+    bottom: 20px;
+    opacity: 1;
+  }
+
+  100% {
+    bottom: -40px;
+    opacity: 0;
+  }
+
+}

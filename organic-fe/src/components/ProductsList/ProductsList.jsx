@@ -3,13 +3,18 @@ import PropTypes from "prop-types";
 import {useEffect, useState} from "react";
 import ProductCard from "./ProductCard/ProductCard.jsx";
 import ProductModal from "../ProductModal/ProductModal.jsx";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {addProductToCart} from "../../redux/actions/cart.js";
+import Alert from "../Alert/Alert.jsx";
 
 export default function ProductsList({productsArray, sortAmount}) {
   const products = useSelector((state) => state.products.productsArr);
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedProductId, setSelectedProductId] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAlertActive, setIsAlertActive] = useState(false);
+  const [alertText, setAlertText] = useState("");
+  const dispatch = useDispatch();
 
   useEffect(() => {
     let sortedProducts = productsArray;
@@ -20,6 +25,7 @@ export default function ProductsList({productsArray, sortAmount}) {
 
     setFilteredProducts(sortedProducts);
   }, [productsArray, sortAmount]);
+
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -32,8 +38,14 @@ export default function ProductsList({productsArray, sortAmount}) {
     document.querySelector('body').style.overflow = "hidden";
   }
 
-  const addToCart = () => {
-
+  const addToCart = (id, quantity) => {
+    dispatch(addProductToCart(id, quantity));
+    setIsAlertActive(true);
+    setAlertText("Product was added successfully");
+    setTimeout(() => {
+      setIsAlertActive(false);
+      setAlertText("");
+    }, 2000);
   }
 
   return (
@@ -43,7 +55,8 @@ export default function ProductsList({productsArray, sortAmount}) {
           return <ProductCard onClick={openModal} key={product.id} product={product}/>
         })}
     </div>
-      {products[selectedProductId] &&  isModalOpen ? <ProductModal closeModal={closeModal} addToCart={addToCart} product={products[selectedProductId]} /> : ""}
+      {products.find(product => product.id === selectedProductId) &&  isModalOpen ? <ProductModal closeModal={closeModal} addToCart={addToCart} product={products.find(product => product.id === selectedProductId)} /> : ""}
+      <Alert className={isAlertActive !== null ? (isAlertActive ? "active" : "inactive") : ""} text={alertText} />
     </>
   )
 }

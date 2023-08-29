@@ -10,10 +10,10 @@
   text-align: left;
 
   &.active {
-    animation: appearing .3s linear forwards;
+    animation: appeare .3s linear forwards;
   }
   &.inactive {
-    animation: closing .3s linear forwards;
+    animation: close .3s linear forwards;
   }
 
   &__close-btn {
@@ -194,26 +194,30 @@
 
 }
 
-@keyframes appearing {
+@keyframes appeare {
 
   0% {
     left: 100vw;
+    opacity: 0;
   }
 
   100% {
     left: 0;
+    opacity: 1;
   }
 
 }
 
-@keyframes closing {
+@keyframes close {
 
   0% {
     left: 0;
+    opacity: 1;
   }
 
   100% {
     left: 100vw;
+    opacity: 0;
   }
 
 }
