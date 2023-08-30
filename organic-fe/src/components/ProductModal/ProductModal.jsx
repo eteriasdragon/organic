@@ -37,7 +37,7 @@ export default function ProductModal({product, closeModal, addToCart}) {
               <div className="product-modal__cart-control">
                 <p className="product-modal__cart-quantity">Quantity:</p>
                 <input onChange={(event) => setCartCount(event.target.value)} type="number" className="product-modal__cart-count" value={cartCount}/>
-                <Button onClick={() => addToCart(id, cartCount)} style="product-modal__cart-add default" text="Add To Cart" />
+                <Button onClick={() => addToCart(id, +cartCount)} style="product-modal__cart-add default" text="Add To Cart" />
               </div>
             </div>
           </div>

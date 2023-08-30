@@ -30,3 +30,9 @@ export function addProductToCart(id, quantity) {
     payload: {id, quantity},
   };
 }
+
+export function clearCart() {
+  return {
+    type: productsTypes.clearCart,
+  };
+}

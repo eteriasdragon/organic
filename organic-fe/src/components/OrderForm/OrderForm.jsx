@@ -1,18 +1,23 @@
 import "./OrderForm.scss";
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import InputMask from 'react-input-mask';
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {initialValues, validationSchema} from "./validation-rules.js";
+import {clearCart} from "../../redux/actions/cart.js";
+import {addNewOrder} from "../../redux/actions/products.js";
+import {cart} from "../../redux/reducers/cart.js";
 
 export default function OrderForm() {
   const cartArr = useSelector((state) => state.cart.cartArr);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleSubmit = ({fullName, email, address, phone, message}) => {
     const order = {
+      id: Date.now(),
       customer: fullName,
       addInfo: message,
       email,
@@ -20,16 +25,20 @@ export default function OrderForm() {
       phone,
       orderList: [...cartArr]
     }
-    console.log(order);
-    setIsSubmitted(true);
+    dispatch(addNewOrder(order));
+
+    setTimeout(() => {
+      setIsSubmitted(true);
+      dispatch(clearCart());
+    } ,2000)
   };
   if (isSubmitted) {
-    navigate("/session-timed-out");
+    // navigate("/session-timed-out");
   }
   return (
       <Formik
         initialValues={initialValues}
-        validationSchema={validationSchema}
+        // validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
         <Form className="form" noValidate>

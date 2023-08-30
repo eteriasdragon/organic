@@ -1,4 +1,5 @@
 import {productsActionTypes as productsTypes} from "../types.js";
+import {clearCart} from "../actions/cart.js";
 
 const initialState = {
   cartArr: []
@@ -45,6 +46,13 @@ export function cart(state = initialState, action) {
           ...state,
           cartArr: updatedUniqueCart,
         };
+      }
+
+    case productsTypes.clearCart:
+      localStorage.setItem("cart", JSON.stringify([]))
+      return {
+        ...state,
+        cartArr: []
       }
 
     default:

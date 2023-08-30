@@ -2,7 +2,7 @@ import "./Positions.scss";
 import PositionItem from "./PositionItem/PositionItem.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {getOrganicPros} from "../../redux/actions/products.js";
+import {getPositions} from "../../redux/actions/products.js";
 
 export default function Positions () {
 
@@ -10,7 +10,7 @@ export default function Positions () {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getOrganicPros());
+    dispatch(getPositions());
   }, [dispatch]);
 
   return(

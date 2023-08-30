@@ -1,11 +1,10 @@
 import express from 'express';
 import cors from 'cors';
-import jwt from 'jsonwebtoken';
 import swaggerUi from'swagger-ui-express';
 import swaggerSpec from './swagger.js';
 import mongoose from "mongoose";
 import { MongoClient, ServerApiVersion } from 'mongodb';
-import {getAllProducts} from "./helpers/products/getAllProducts.js";
+import {getAllProducts} from "./helpers/getAllProducts.js";
 import {getNews} from "./helpers/news.js";
 import {getAboutList} from "./helpers/about.js";
 import {getReviews} from "./helpers/reviews.js";
@@ -13,6 +12,8 @@ import {getStatistics} from "./helpers/statistics.js";
 import {getDiscounts} from "./helpers/discounts.js";
 import {getOrganicPros} from "./helpers/organicPros.js";
 import {getPositions} from "./helpers/positions.js";
+import {addNewOrder, getAllOrders} from "./helpers/orders.js";
+import Order from "./models/order.js";
 
 const app = express();
 const uri = `mongodb+srv://aethereal-dragon:QRNVUQeH0MhIQUFJ@cluster0.xlu38qm.mongodb.net/`;
@@ -21,14 +22,6 @@ app.use(cors());
 app.use(express.json());
 
 app.use('/api', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-
-// app.use(function(req,res, next) {
-//     if (req.path === '/login' || req.path === '/api') {
-//         next();
-//     } else {
-//         verifyToken(req, res, next)
-//     }
-// })
 
 export const client = new MongoClient(uri, {
   serverApi: {
@@ -78,6 +71,20 @@ app.get('/positions', async function(req, res) {
   res.send(positionsList);
 });
 
+app.get('/orders', async function(req, res) {
+  const ordersList = await getAllOrders();
+  res.send(ordersList);
+});
+
+app.post('/orders', async function(req, res){
+  try {
+    await addNewOrder(new Order(req.body));
+    res.send(req.body);
+  } catch (e) {
+    console.log(e);
+  }
+})
+
 async function startServer() {
   try {
     await mongoose.connect(uri);
@@ -103,25 +110,5 @@ startServer()
 //     await client.close();
 //   }
 // }
-//
-// const news = [
-//   {
-//     id: 0,
-//     date: "25 Nov",
-//     author: "Rachi Card",
-//     title: "The Benefits of Vitamin D & How to Get It",
-//     text: "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-//     backgroundUrl: "https://i.ibb.co/C2xFzyp/vitamins.png"
-//   },
-//   {
-//     id: 1,
-//     date: "25 Nov",
-//     author: "Rachi Card",
-//     title: "Our Favourite Summertime Tommeto",
-//     text: "Simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-//     backgroundUrl: "https://i.ibb.co/9GzqyHB/tommeto.png"
-//   },
-// ];
-//
-//
+
 // // insertMany("news", news)
