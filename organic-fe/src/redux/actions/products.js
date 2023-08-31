@@ -11,9 +11,11 @@ export const fetchAllProducts = () => async (dispatch) => {
   }
 };
 export function fillProducts(products) {
+  const filteredProducts = [...products.filter(product => product.discount), ...products.filter(product => !product.discount)]
+
   return {
     type: productsTypes.getAllProducts,
-    payload: products ? products : [],
+    payload: filteredProducts ? filteredProducts : [],
   };
 }
 

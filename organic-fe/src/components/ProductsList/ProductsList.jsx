@@ -12,7 +12,7 @@ export default function ProductsList({productsArray, sortAmount}) {
   const [filteredProducts, setFilteredProducts] = useState([]);
   const [selectedProductId, setSelectedProductId] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isAlertActive, setIsAlertActive] = useState(false);
+  const [isAlertActive, setIsAlertActive] = useState(null);
   const [alertText, setAlertText] = useState("");
   const dispatch = useDispatch();
 

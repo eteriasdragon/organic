@@ -2,16 +2,13 @@ import "./OrderForm.scss";
 import {ErrorMessage, Field, Form, Formik} from "formik";
 import InputMask from 'react-input-mask';
 import {useDispatch, useSelector} from "react-redux";
-import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {initialValues, validationSchema} from "./validation-rules.js";
 import {clearCart} from "../../redux/actions/cart.js";
 import {addNewOrder} from "../../redux/actions/products.js";
-import {cart} from "../../redux/reducers/cart.js";
 
 export default function OrderForm() {
   const cartArr = useSelector((state) => state.cart.cartArr);
-  const [isSubmitted, setIsSubmitted] = useState(false);
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -28,13 +25,10 @@ export default function OrderForm() {
     dispatch(addNewOrder(order));
 
     setTimeout(() => {
-      setIsSubmitted(true);
+      navigate("/thank-you");
       dispatch(clearCart());
     } ,2000)
   };
-  if (isSubmitted) {
-    // navigate("/session-timed-out");
-  }
   return (
       <Formik
         initialValues={initialValues}

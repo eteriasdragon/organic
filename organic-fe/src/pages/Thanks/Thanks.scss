@@ -1,0 +1,12 @@
+.thanks-page {
+  height: 40vh !important;
+  background-image: url("./src/assets/thanks/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__heading {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+}

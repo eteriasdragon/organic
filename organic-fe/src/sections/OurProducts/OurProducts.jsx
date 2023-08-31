@@ -4,7 +4,6 @@ import {useEffect, useState} from "react";
 import {fetchAllProducts} from "../../redux/actions/products.js";
 import Button from "../../components/Button/Button.jsx";
 import ProductsList from "../../components/ProductsList/ProductsList.jsx";
-import ProductModal from "../../components/ProductModal/ProductModal.jsx";
 
 export default function OurProducts () {
 

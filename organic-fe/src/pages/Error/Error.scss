@@ -1,0 +1,36 @@
+.notfound {
+  height: calc(100vh - 150px) !important;
+  background: url("./src/assets/404/decore.png"), url("./src/assets/404/background.png");
+  background-size: cover, cover;
+
+  &__inner-container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__content {
+  }
+
+  &__number {
+    color: #8FA8A8;
+    min-height: auto;
+    font-size: 18rem;
+    line-height: 1;
+  }
+
+  &__heading {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  &__descr {
+    color: #525C60;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 165.4%;
+    margin-bottom: 30px;
+  }
+}

@@ -7,6 +7,9 @@ import Cart from "./pages/Cart/Cart.jsx";
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
 import {getProductsInCart} from "./redux/actions/cart.js";
+import Error from "./pages/Error/Error.jsx";
+import NotFound from "./components/Notfound/Norfound.js";
+import Thanks from "./pages/Thanks/Thanks.jsx";
 
 function App() {
 
@@ -23,7 +26,9 @@ function App() {
       <Route path="/" element={<Home />}/>
       <Route path="/cart" element={<Cart />}/>
       {/*<Route path="/admin" />*/}
-      <Route path="*" />
+      <Route path="/thank-you" element={<Thanks />} />
+      <Route path="/error" element={<Error />}/>
+      <Route path="*" element={<NotFound />}/>
     </Routes>
       <Footer/>
     </>
