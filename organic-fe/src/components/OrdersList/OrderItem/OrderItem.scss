@@ -1,0 +1,20 @@
+.order-item {
+  width: 100%;
+  background-color: #f8f8f8;
+
+  &__title-wrapper {
+    background-color: #c9c9c9;
+    width: auto;
+    font-weight: 700;
+    box-sizing: border-box;
+
+    & span {
+      font-weight: 400;
+    }
+  }
+
+  &__title {
+    width: auto !important;
+    transition: .3s;
+  }
+}

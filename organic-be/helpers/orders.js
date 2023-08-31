@@ -17,7 +17,6 @@ export async function addNewOrder(orderData) {
     const db = await client.db('storedb');
     const collectionToUpd = await db.collection('orders');
     await collectionToUpd.insertOne(orderData);
-    console.log("order successfully added")
   } catch (e) {
     console.log(e);
   }

@@ -4,6 +4,7 @@ import SearchIcon from "./SearchIcon/SearchIcon.jsx";
 import CartButton from "./CartButton/CartButton.jsx";
 import Logo from "../Logo/Logo.jsx";
 import "./Header.scss";
+import AdminButton from "./AdminButton/AdminButton.jsx";
 
 export default function Header() {
 
@@ -18,6 +19,7 @@ export default function Header() {
         </nav>
         <SearchIcon className="header__search"/>
         <CartButton className="header__cart"/>
+        <AdminButton className="header__admin" />
       </div>
     </header>
   )

@@ -11,7 +11,7 @@ import OrderForm from "../OrderForm/OrderForm.jsx";
 export default function CartList () {
   const cartArr = useSelector((state) => state.cart.cartArr);
   const products = useSelector((state) => state.products.productsArr);
-  const [isAlertActive, setIsAlertActive] = useState(false);
+  const [isAlertActive, setIsAlertActive] = useState(null);
   const [alertText, setAlertText] = useState("");
   const [isOrdering, setIsOrdering] = useState(false);
   const dispatch = useDispatch();

@@ -10,6 +10,7 @@ import {getProductsInCart} from "./redux/actions/cart.js";
 import Error from "./pages/Error/Error.jsx";
 import NotFound from "./components/Notfound/Norfound.js";
 import Thanks from "./pages/Thanks/Thanks.jsx";
+import Admin from "./pages/Admin/Admin.jsx";
 
 function App() {
 
@@ -25,7 +26,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />}/>
       <Route path="/cart" element={<Cart />}/>
-      {/*<Route path="/admin" />*/}
+      <Route path="/admin" element={<Admin />}/>
       <Route path="/thank-you" element={<Thanks />} />
       <Route path="/error" element={<Error />}/>
       <Route path="*" element={<NotFound />}/>
