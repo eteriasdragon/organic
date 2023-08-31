@@ -2,10 +2,9 @@ import "./ProductsList.scss";
 import PropTypes from "prop-types";
 import {useEffect, useState} from "react";
 import ProductCard from "./ProductCard/ProductCard.jsx";
-import ProductModal from "../ProductModal/ProductModal.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {addProductToCart} from "../../redux/actions/cart.js";
-import Alert from "../Alert/Alert.jsx";
+import {Alert, ProductModal} from "../index.js";
 
 export default function ProductsList({productsArray, sortAmount}) {
   const products = useSelector((state) => state.products.productsArr);

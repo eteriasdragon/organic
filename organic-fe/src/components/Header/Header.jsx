@@ -2,9 +2,9 @@ import {menuList} from "./header-config.js";
 import NavItem from "./NavItem/NavItem.jsx";
 import SearchIcon from "./SearchIcon/SearchIcon.jsx";
 import CartButton from "./CartButton/CartButton.jsx";
-import Logo from "../Logo/Logo.jsx";
 import "./Header.scss";
 import AdminButton from "./AdminButton/AdminButton.jsx";
+import {Logo} from "../index.js";
 
 export default function Header() {
 

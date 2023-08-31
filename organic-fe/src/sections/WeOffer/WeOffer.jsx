@@ -1,7 +1,7 @@
 import "./WeOffer.scss";
 import {useSelector} from "react-redux";
 import PropTypes from "prop-types";
-import ProductsList from "../../components/ProductsList/ProductsList.jsx";
+import {ProductsList} from "../../components/index.js";
 
 export default function WeOffer ({category}) {
   const products = useSelector((state) => state.products.productsArr);

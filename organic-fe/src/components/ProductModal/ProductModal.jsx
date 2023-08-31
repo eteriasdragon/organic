@@ -1,8 +1,8 @@
 import "./ProductModal.scss";
 import Rating from "react-rating";
-import Button from "../Button/Button.jsx";
 import PropTypes from "prop-types";
 import {useState} from "react";
+import {Button} from "../index.js";
 
 export default function ProductModal({product, closeModal, addToCart}) {
   const {addInfo, category, discount, price, imgUrl, mainInfo, name, rating, id} = product;

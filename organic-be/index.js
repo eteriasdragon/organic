@@ -4,16 +4,16 @@ import swaggerUi from'swagger-ui-express';
 import swaggerSpec from './swagger.js';
 import mongoose from "mongoose";
 import { MongoClient, ServerApiVersion } from 'mongodb';
-import {getAllProducts} from "./helpers/getAllProducts.js";
-import {getNews} from "./helpers/news.js";
-import {getAboutList} from "./helpers/about.js";
-import {getReviews} from "./helpers/reviews.js";
-import {getStatistics} from "./helpers/statistics.js";
 import {getDiscounts} from "./helpers/discounts.js";
-import {getOrganicPros} from "./helpers/organicPros.js";
-import {getPositions} from "./helpers/positions.js";
+import {getAboutList} from "./helpers/about.js";
+import {getNews} from "./helpers/news.js";
 import {addNewOrder, getAllOrders} from "./helpers/orders.js";
 import Order from "./models/order.js";
+import {getOrganicPros} from "./helpers/organicPros.js";
+import {getPositions} from "./helpers/positions.js";
+import {getAllProducts} from "./helpers/getAllProducts.js";
+import {getReviews} from "./helpers/reviews.js";
+import {getStatistics} from "./helpers/statistics.js";
 
 const app = express();
 const uri = `mongodb+srv://aethereal-dragon:QRNVUQeH0MhIQUFJ@cluster0.xlu38qm.mongodb.net/`;
@@ -31,44 +31,32 @@ export const client = new MongoClient(uri, {
   }
 });
 
-app.get('/products', async function(req, res) {
-  const allProducts = await getAllProducts();
-  res.send(allProducts);
-});
+async function startServer() {
+  try {
+    await mongoose.connect(uri);
+    console.log("MongoDB connected")
+    app.listen(3001,()=> {console.log('server was started!');})
+  }
+  catch (e) {
+    console.log(e);
+  }
+}
 
-app.get('/news', async function(req, res) {
-  const news = await getNews();
-  res.send(news);
-});
+startServer()
 
 app.get('/about', async function(req, res) {
   const aboutList = await getAboutList();
   res.send(aboutList);
 });
 
-app.get('/reviews', async function(req, res) {
-  const reviewsList = await getReviews();
-  res.send(reviewsList);
-});
-
-app.get('/statistics', async function(req, res) {
-  const stateList = await getStatistics();
-  res.send(stateList);
-});
-
-app.get('/discounts', async function(req, res) {
+app.get("/discounts", async function (req,res){
   const discountsList = await getDiscounts();
   res.send(discountsList);
 });
 
-app.get('/organic-pros', async function(req, res) {
-  const organicProsList = await getOrganicPros();
-  res.send(organicProsList);
-});
-
-app.get('/positions', async function(req, res) {
-  const positionsList = await getPositions();
-  res.send(positionsList);
+app.get('/news', async function(req, res) {
+  const news = await getNews();
+  res.send(news);
 });
 
 app.get('/orders', async function(req, res) {
@@ -85,30 +73,27 @@ app.post('/orders', async function(req, res){
   }
 })
 
-async function startServer() {
-  try {
-    await mongoose.connect(uri);
-    console.log("MongoDB connected")
-    app.listen(3001,()=> {console.log('server was started!');})
-  }
-  catch (e) {
-    console.log(e);
-  }
-}
+app.get('/organic-pros', async function(req, res) {
+  const organicProsList = await getOrganicPros();
+  res.send(organicProsList);
+});
 
-startServer()
+app.get('/positions', async function(req, res) {
+  const positionsList = await getPositions();
+  res.send(positionsList);
+});
 
+app.get('/products', async function(req, res) {
+  const allProducts = await getAllProducts();
+  res.send(allProducts);
+});
 
-// async function insertMany(collection, array) {
-//   try {
-//     await client.connect();
-//     const db = await client.db('storedb');
-//     const collectionToUpd = await db.collection(collection);
-//     await collectionToUpd.insertMany(array);
-//     console.log("successfully added")
-//   } finally {
-//     await client.close();
-//   }
-// }
+app.get('/reviews', async function(req, res) {
+  const reviewsList = await getReviews();
+  res.send(reviewsList);
+});
 
-// // insertMany("news", news)
+app.get('/statistics', async function(req, res) {
+  const stateList = await getStatistics();
+  res.send(stateList);
+});

@@ -40,7 +40,7 @@
     font-weight: 400;
     line-height: normal;
 
-    & span {
+    & span:nth-child(1) {
       font-weight: 600;
     }
   }

@@ -1,5 +1,5 @@
-import Button from "../Button/Button.jsx";
 import "./SubscribeForm.scss";
+import {Button} from "../index.js";
 
 export default function SubscribeForm () {
 return (

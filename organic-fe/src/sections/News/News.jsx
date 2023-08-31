@@ -1,9 +1,9 @@
 import "./News.scss";
 import NewsItem from "./NewsItem/NewsItem.jsx";
-import Button from "../../components/Button/Button.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {getNews} from "../../redux/actions/products.js";
+import {Button} from "../../components/index.js";
 
 export default function News () {
   const newsData = useSelector((state) => state.news.newsArr);

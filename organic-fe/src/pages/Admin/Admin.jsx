@@ -1,5 +1,6 @@
 import "./Admin.scss";
-import OrdersList from "../../components/OrdersList/OrdersList.jsx";
+import {OrdersList} from "../../components/index.js";
+
 
 export default function Admin() {
 

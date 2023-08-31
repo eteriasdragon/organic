@@ -1,12 +1,11 @@
+import "./CartList.scss";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
-import "./CartList.scss";
-import CartItem from "./CartItem/CartItem.jsx";
 import {fetchAllProducts, getAllOrders} from "../../redux/actions/products.js";
-import Button from "../Button/Button.jsx";
 import {addProductToCart, getProductsInCart, removeProductFromCart} from "../../redux/actions/cart.js";
-import Alert from "../Alert/Alert.jsx";
-import OrderForm from "../OrderForm/OrderForm.jsx";
+import CartItem from "./CartItem/CartItem.jsx";
+import {Alert, Button, OrderForm} from "../index.js";
+
 
 export default function CartList () {
   const cartArr = useSelector((state) => state.cart.cartArr);

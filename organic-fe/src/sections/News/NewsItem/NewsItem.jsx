@@ -1,6 +1,7 @@
 import "./NewsItem.scss";
 import PropTypes from "prop-types";
-import Button from "../../../components/Button/Button.jsx";
+import {Button} from "../../../components/index.js";
+
 
 export default function NewsItem ({date, author, title, text, backgroundUrl}) {
   const url = `url("${backgroundUrl}")`;

@@ -1,6 +1,6 @@
-import CustomHeroBlock from "../../components/CustomHeroBlock/CustomHeroBlock.jsx";
 import "./Cart.scss";
-import CartList from "../../components/CartList/CartList.jsx";
+import {CartList, CustomHeroBlock} from "../../components/index.js";
+
 
 export default function Cart () {
 

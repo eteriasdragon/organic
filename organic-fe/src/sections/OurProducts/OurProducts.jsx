@@ -2,8 +2,7 @@ import "./OurProducts.scss";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
 import {fetchAllProducts} from "../../redux/actions/products.js";
-import Button from "../../components/Button/Button.jsx";
-import ProductsList from "../../components/ProductsList/ProductsList.jsx";
+import {Button, ProductsList} from "../../components/index.js";
 
 export default function OurProducts () {
 

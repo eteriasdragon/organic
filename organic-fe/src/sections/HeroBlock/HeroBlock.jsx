@@ -1,5 +1,6 @@
 import "./HeroBlock.scss";
-import Button from "../../components/Button/Button.jsx";
+import {Button} from "../../components/index.js";
+
 
 export default function HeroBlock() {
   return <section className="hero-block">

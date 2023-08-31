@@ -33,7 +33,7 @@ export default function OrderItemDetails({order, creds}) {
         <p className="order-credentials__item"><span>Email: </span> {phone}</p>
         <p className="order-credentials__item"><span>Phone: </span> {address}</p>
         <p className="order-credentials__item"><span>Address: </span> {email}</p>
-        <p className="order-credentials__item"><span>Message: </span> <p>{addInfo}</p></p>
+        <p className="order-credentials__item"><span>Message: </span> <span>{addInfo}</span></p>
       </div>
     </div>
   )

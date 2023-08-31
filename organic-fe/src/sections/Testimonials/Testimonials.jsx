@@ -1,9 +1,8 @@
 import "./Testimonials.scss";
-import ReviewsSlider from "../../components/ReviewsSlider/ReviewsSlider.jsx";
-import StateCircle from "../../components/StateCircle/StateCircle.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {getReviews, getStatistics} from "../../redux/actions/products.js";
+import {ReviewsSlider, StateCircle} from "../../components/index.js";
 
 export default function Testimonials () {
 

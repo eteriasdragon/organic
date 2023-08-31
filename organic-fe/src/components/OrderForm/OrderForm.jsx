@@ -32,7 +32,7 @@ export default function OrderForm() {
   return (
       <Formik
         initialValues={initialValues}
-        // validationSchema={validationSchema}
+        validationSchema={validationSchema}
         onSubmit={handleSubmit}
       >
         <Form className="form" noValidate>

@@ -8,7 +8,6 @@ import "./OrdersList.scss";
 
 export default function OrdersList() {
   const orders = useSelector(state => state.orders.ordersList);
-  console.log(orders);
   const dispatch = useDispatch();
 
   useEffect(() => {
