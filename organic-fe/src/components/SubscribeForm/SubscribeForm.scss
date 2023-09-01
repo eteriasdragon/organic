@@ -1,7 +1,6 @@
 .subscribe {
 
   &__inner-container {
-    background-image: url("./src/assets/footer/subscribe-form.png");
     background-repeat: no-repeat;
     border-radius: 1.875rem;
     height: 300px;
@@ -10,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: url("https://i.ibb.co/k8DMKV1/subscribe-form.png");
   }
 
   margin: 0 auto;

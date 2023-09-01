@@ -15,7 +15,7 @@ export default function EcoFriendly() {
 
   return (
     <section className="eco-section">
-      <img src="./src/assets/eco-friendly/landscape.png" alt="landscape" className="eco-section__img"/>
+      <img src="https://i.ibb.co/P9s1qR2/landscape.png" alt="landscape" className="eco-section__img"/>
       <div className="eco-section__inner-container">
         <div className="eco-section__content-wrapper">
           <p className="eco-section__subheading">Eco Friendly</p>

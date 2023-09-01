@@ -6,7 +6,7 @@ export default function Cart () {
 
   return (
     <main>
-      <CustomHeroBlock title="Cart" backgroundSrc="./src/assets/cart/background.png" additionalDecorSrc="./src/assets/cart/grey-icons.png"/>
+      <CustomHeroBlock title="Cart" backgroundSrc="https://i.ibb.co/JH6wjzT/cart-background.png" additionalDecorSrc="https://i.ibb.co/Hd2G35j/cart-grey-icons.png"/>
       <CartList />
     </main>
   )

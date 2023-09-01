@@ -29,6 +29,8 @@ app.use('/products', productsRouter);
 app.use('/reviews', reviewsRouter);
 app.use('/statistics', statisticsRouter);
 
+app.use(express.static('../organic-fe/dist'));
+
 export const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,

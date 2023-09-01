@@ -14,7 +14,7 @@ export default function Shop() {
 
   return (
     <section className="shop-section">
-      <CustomHeroBlock title="Shop" backgroundSrc="./src/assets/shop/background.png" additionalDecorSrc="./src/assets/shop/grey-icons.png" />
+      <CustomHeroBlock title="Shop" backgroundSrc="https://i.ibb.co/JH6wjzT/cart-background.png" additionalDecorSrc="https://i.ibb.co/Hd2G35j/cart-grey-icons.png" />
       <div className="shop-section__inner-container">
         <ProductsList productsArray={products} sortAmount={16} />
         <SubscribeForm />

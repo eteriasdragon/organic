@@ -1,5 +1,9 @@
 import "./Footer.scss";
 import Logo from "../Logo/Logo.jsx";
+import fcbIcon from "./fcb.svg";
+import instIcon from "./inst.svg";
+import pintIcon from "./pint.svg";
+import twitIcon from "./twit.svg";
 
 export default function Footer() {
   return <footer className="footer">
@@ -27,16 +31,16 @@ export default function Footer() {
           </p>
           <div className="footer-company__social-wrapper">
             <div className="footer-company__social-item">
-              <img src="./src/assets/networks/inst.svg" alt="instagram" className="footer-company__social-item-icon"/>
+              <img src={instIcon} alt="instagram" className="footer-company__social-item-icon"/>
             </div>
             <div className="footer-company__social-item">
-              <img src="./src/assets/networks/fcb.svg" alt="facebook" className="footer-company__social-item-icon"/>
+              <img src={fcbIcon} alt="facebook" className="footer-company__social-item-icon"/>
             </div>
             <div className="footer-company__social-item">
-              <img src="./src/assets/networks/twit.svg" alt="twitter" className="footer-company__social-item-icon"/>
+              <img src={twitIcon} alt="twitter" className="footer-company__social-item-icon"/>
             </div>
             <div className="footer-company__social-item">
-              <img src="./src/assets/networks/pint.svg" alt="pinterest" className="footer-company__social-item-icon"/>
+              <img src={pintIcon} alt="pinterest" className="footer-company__social-item-icon"/>
             </div>
           </div>
         </div>
