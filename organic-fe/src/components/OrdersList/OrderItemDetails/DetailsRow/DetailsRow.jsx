@@ -13,7 +13,7 @@ export default function Row({position, quantity}) {
         <img className="details-row__img" src={imgUrl} alt={name}/>
         <p className="details-row__name">{name}</p>
       </div>
-      <div className="details-row__price">{priceWithDiscount} $</div>
+      <div className="details-row__price">{priceWithDiscount.toFixed(2)} $</div>
       <div className="details-row__amount">{quantity}</div>
       <div className="details-row__total">{(priceWithDiscount * quantity).toFixed(2)} $</div>
     </div>
