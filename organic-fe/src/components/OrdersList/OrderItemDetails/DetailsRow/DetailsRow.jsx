@@ -5,7 +5,7 @@ export default function Row({position, quantity}) {
 
   const {imgUrl, name, price, discount} = position;
 
-  const priceWithDiscount = (price - price * discount/100).toFixed(2);
+  const priceWithDiscount = price - price * discount/100;
 
   return (
     <div className="details-row">
@@ -15,7 +15,7 @@ export default function Row({position, quantity}) {
       </div>
       <div className="details-row__price">{priceWithDiscount} $</div>
       <div className="details-row__amount">{quantity}</div>
-      <div className="details-row__total">{priceWithDiscount * quantity} $</div>
+      <div className="details-row__total">{(priceWithDiscount * quantity).toFixed(2)} $</div>
     </div>
   )
 }
