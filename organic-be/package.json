@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "nodemon index"
+    "server": "nodemon index.js",
+    "start": "node index.js",
+    "build" :  "npm install && cd ../organic-fe && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
