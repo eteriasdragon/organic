@@ -1,8 +1,9 @@
 import "./Testimonials.scss";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {getReviews, getStatistics} from "../../redux/actions/products.js";
+import {getStatistics} from "../../redux/actions/statistics.js";
 import {ReviewsSlider, StateCircle} from "../../components/index.js";
+import {getReviews} from "../../redux/actions/reviews.js";
 
 export default function Testimonials () {
 

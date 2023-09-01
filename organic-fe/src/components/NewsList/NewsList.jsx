@@ -1,7 +1,7 @@
 import "./NewsList.scss";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {getNews} from "../../redux/actions/products.js";
+import {getNews} from "../../redux/actions/news.js";
 import NewsItem from "./NewsItem/NewsItem.jsx";
 import PropTypes from "prop-types";
 

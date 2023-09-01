@@ -2,7 +2,7 @@ import "./Discounts.scss";
 import DiscountsItem from "./DiscountItem/DiscountItem.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {getDiscounts} from "../../redux/actions/products.js";
+import {getDiscounts} from "../../redux/actions/discounts.js";
 
 export default function Discounts () {
 

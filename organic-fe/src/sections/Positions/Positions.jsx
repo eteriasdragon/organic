@@ -2,7 +2,7 @@ import "./Positions.scss";
 import PositionItem from "./PositionItem/PositionItem.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {getPositions} from "../../redux/actions/products.js";
+import {getPositions} from "../../redux/actions/positions.js";
 
 export default function Positions () {
 

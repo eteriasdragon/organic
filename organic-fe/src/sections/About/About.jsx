@@ -2,8 +2,8 @@ import "./About.scss";
 import AboutItem from "./AboutItem/AboutItem.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {getAboutList} from "../../redux/actions/products.js";
 import {Button} from "../../components/index.js";
+import {getAboutList} from "../../redux/actions/about.js";
 
 export default function About() {
 

@@ -2,7 +2,7 @@ import {Accordion} from "react-accessible-accordion";
 import OrderItem from "./OrderItem/OrderItem.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {getAllOrders} from "../../redux/actions/products.js";
+import {getAllOrders} from "../../redux/actions/orders.js";
 import 'react-accessible-accordion/dist/fancy-example.css';
 import "./OrdersList.scss";
 

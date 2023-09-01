@@ -2,7 +2,7 @@ import "./EcoFriendly.scss";
 import ListItem from "./ListItem/ListItem.jsx";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
-import {getOrganicPros} from "../../redux/actions/products.js";
+import {getOrganicPros} from "../../redux/actions/organic-pros.js";
 
 export default function EcoFriendly() {
 
