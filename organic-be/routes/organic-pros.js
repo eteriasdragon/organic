@@ -1,9 +1,7 @@
-import {getOrganicPros} from "../helpers/organicPros.js";
 import express from "express";
+import {getOrganicProsList} from "../controllers/organic-pros.js";
+const router = express.Router();
 
-const app = express();
+router.get("/", getOrganicProsList);
 
-app.get('/organic-pros', async function(req, res) {
-  const organicProsList = await getOrganicPros();
-  res.send(organicProsList);
-});
+export default router;

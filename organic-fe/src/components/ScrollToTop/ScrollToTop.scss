@@ -1,0 +1,27 @@
+.to-up {
+  width: 60px;
+  height: 60px;
+  background: rgba(104, 164, 127, 0.7) url("./icon.png");
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #274C5B;
+  cursor: pointer;
+  transition: .3s;
+  bottom: -60px;
+  right: -20px;
+
+  &.active {
+    bottom: 55px;
+    right: 20px;
+  }
+
+  &:hover {
+    box-shadow: 0 0 2px 1px #ababab;
+  }
+}

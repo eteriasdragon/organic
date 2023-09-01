@@ -1,9 +1,7 @@
-import {getReviews} from "../helpers/reviews.js";
 import express from "express";
+import {getReviewslist} from "../controllers/reviews.js";
+const router = express.Router();
 
-const app = express();
+router.get("/", getReviewslist);
 
-app.get('/reviews', async function(req, res) {
-  const reviewsList = await getReviews();
-  res.send(reviewsList);
-});
+export default router;

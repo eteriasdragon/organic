@@ -1,9 +1,7 @@
-import {getStatistics} from "../helpers/statistics.js";
 import express from "express";
+import {getStatisticsInfo} from "../controllers/statistics.js";
+const router = express.Router();
 
-const app = express();
+router.get("/", getStatisticsInfo);
 
-app.get('/statistics', async function(req, res) {
-  const stateList = await getStatistics();
-  res.send(stateList);
-});
+export default router;

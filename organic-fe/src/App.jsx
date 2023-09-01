@@ -3,9 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import {useDispatch} from "react-redux";
 import {useEffect} from "react";
 import {getProductsInCart} from "./redux/actions/cart.js";
-import {Footer, Header} from "./components/index.js";
-import {Admin, Cart, Home, Thanks, Error} from "./pages/index.js";
-import NotFound from "./components/Notfound/Notfound.js";
+import {Footer, Header, Notfound, ScrollToTop} from "./components/index.js";
+import {Admin, Cart, Home, Thanks, Error, Shop, NewsSection} from "./pages/index.js";
 
 
 function App() {
@@ -23,11 +22,14 @@ function App() {
       <Route path="/" element={<Home />}/>
       <Route path="/cart" element={<Cart />}/>
       <Route path="/admin" element={<Admin />}/>
+      <Route path="/shop" element={<Shop />}/>
+      <Route path="/news" element={<NewsSection />}/>
       <Route path="/thank-you" element={<Thanks />} />
       <Route path="/error" element={<Error />} />
-      <Route path="*" element={<NotFound />}/>
+      <Route path="*" element={<Notfound />}/>
     </Routes>
       <Footer/>
+      <ScrollToTop />
     </>
   )
 }

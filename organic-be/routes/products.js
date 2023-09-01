@@ -1,9 +1,7 @@
-import {getAllProducts} from "../helpers/getAllProducts.js";
 import express from "express";
+import {getProductsList} from "../controllers/products.js";
+const router = express.Router();
 
-const app = express();
+router.get("/", getProductsList);
 
-app.get('/products', async function(req, res) {
-  const allProducts = await getAllProducts();
-  res.send(allProducts);
-});
+export default router;

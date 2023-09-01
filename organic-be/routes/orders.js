@@ -1,19 +1,9 @@
-import {addNewOrder, getAllOrders} from "../helpers/orders.js";
-import Order from "../models/order.js";
 import express from "express";
+import {getOrdersList, pushNewOrder} from "../controllers/orders.js";
+const router = express.Router();
 
-const app = express();
+router.get("/", getOrdersList);
 
-app.get('/orders', async function(req, res) {
-  const ordersList = await getAllOrders();
-  res.send(ordersList);
-});
+router.post("/", pushNewOrder);
 
-app.post('/orders', async function(req, res){
-  try {
-    await addNewOrder(new Order(req.body));
-    res.send(req.body);
-  } catch (e) {
-    console.log(e);
-  }
-})
+export default router;

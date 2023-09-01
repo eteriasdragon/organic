@@ -13,3 +13,5 @@ export { default as ProductsList } from './ProductsList/ProductsList.jsx';
 export { default as ReviewsSlider } from './ReviewsSlider/ReviewsSlider.jsx';
 export { default as StateCircle } from './StateCircle/StateCircle.jsx';
 export { default as SubscribeForm } from './SubscribeForm/SubscribeForm.jsx';
+export { default as ScrollToTop } from './ScrollToTop/ScrollToTop.jsx';
+export { default as NewsList } from './NewsList/NewsList.jsx';

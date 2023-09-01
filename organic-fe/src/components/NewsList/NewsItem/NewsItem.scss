@@ -3,6 +3,9 @@
   padding: 40px 35px 0;
   box-sizing: border-box;
   border-radius: 1.875rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 100px;
 
   &__date {
     width: 80px;
@@ -52,7 +55,7 @@
       left: 0;
       width: 18px;
       height: 18px;
-      background-image: url("./icon.svg");
+      background-image: url("icon.svg");
     }
   }
 

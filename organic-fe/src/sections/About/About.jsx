@@ -26,7 +26,7 @@ export default function About() {
             return <AboutItem key={id} title={item.title} text={item.text} url={item.url}/>;
           })}
         </div>
-      <Button style="default" text="Shop Now"/>
+      <Button style="default" text="Shop Now" navLink="/shop"/>
       </div>
     </div>
   </section>

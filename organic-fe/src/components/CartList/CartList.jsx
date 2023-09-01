@@ -74,7 +74,7 @@ export default function CartList () {
           <p className="cart-list-section__summary-total">Total Cost<span>{(totalCartSummary.totalPrice - totalCartSummary.totalDiscount).toFixed(2)}$</span></p>
           <p className="cart-list-section__summary-discount">Discount<span>{totalCartSummary.totalDiscount.toFixed(2)}$</span></p>
         </div>
-        {isOrdering ? <OrderForm /> : <Button disabled={!cartArr.length} style="default" text="To order" onClick={() => setIsOrdering(true)}/>}
+        {isOrdering ? <OrderForm /> : (cartArr.length ? <Button style="default" text="To order" onClick={() => setIsOrdering(true)}/> : <Button style="default" text="Shop Now" navLink="/shop"/>)}
       </div>
       <Alert className={isAlertActive !== null ? (isAlertActive ? "active" : "inactive") : ""} text={alertText} />
     </section>

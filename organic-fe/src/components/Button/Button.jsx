@@ -5,7 +5,10 @@ import {NavLink} from "react-router-dom";
 export default function Button ({text, style, onClick, disabled, navLink}) {
   return (
     navLink ? (
-      <NavLink to={navLink} className={style + " button"}>
+      <NavLink to={navLink} className={style + " button"} onClick={() => window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })}>
         {text}
       </NavLink>
     ) : (

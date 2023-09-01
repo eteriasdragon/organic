@@ -1,9 +1,7 @@
-import {getPositions} from "../helpers/positions.js";
 import express from "express";
+import {getPositionsList} from "../controllers/positions.js";
+const router = express.Router();
 
-const app = express();
+router.get("/", getPositionsList);
 
-app.get('/positions', async function(req, res) {
-  const positionsList = await getPositions();
-  res.send(positionsList);
-});
+export default router;

@@ -30,9 +30,9 @@ export default function OrderItemDetails({order, creds}) {
       </div>
       <div className="order-credentials">
         <p className="order-credentials__item"><span>Customer: </span> {customer}</p>
-        <p className="order-credentials__item"><span>Email: </span> {phone}</p>
-        <p className="order-credentials__item"><span>Phone: </span> {address}</p>
-        <p className="order-credentials__item"><span>Address: </span> {email}</p>
+        <p className="order-credentials__item"><span>Email: </span> {email}</p>
+        <p className="order-credentials__item"><span>Phone: </span> {phone}</p>
+        <p className="order-credentials__item"><span>Address: </span> {address}</p>
         <p className="order-credentials__item"><span>Message: </span> <span>{addInfo}</span></p>
       </div>
     </div>

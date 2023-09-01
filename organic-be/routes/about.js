@@ -1,7 +1,7 @@
 import express from "express";
-import {getNewsList} from "../controllers/news.js";
+import {getAbout} from "../controllers/about.js";
 const router = express.Router();
 
-router.get("/", getNewsList);
+router.get("/", getAbout);
 
 export default router;

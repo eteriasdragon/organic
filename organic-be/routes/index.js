@@ -1,0 +1,9 @@
+export { default as discountsRouter } from './discounts.js';
+export { default as aboutRouter } from './about.js';
+export { default as newsRouter } from './news.js';
+export { default as ordersRouter } from './orders.js';
+export { default as organicProsRouter } from './organic-pros.js';
+export { default as positionsRouter } from './positions.js';
+export { default as productsRouter } from './products.js';
+export { default as reviewsRouter } from './reviews.js';
+export { default as statisticsRouter } from './statistics.js';
