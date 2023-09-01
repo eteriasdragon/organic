@@ -53,7 +53,7 @@ export default function OrdersList() {
 
   return (
     <>
-      <Button style="default" text="export" onClick={exportToExcel}/>
+      <Button style="default export-btn" text="Export to Excel" onClick={exportToExcel}/>
       <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
         {orders.map((order) => {
           return <OrderItem key={order.id} details={order}/>
