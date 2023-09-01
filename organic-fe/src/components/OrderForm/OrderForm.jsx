@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useNavigate} from "react-router-dom";
 import {initialValues, validationSchema} from "./validation-rules.js";
 import {clearCart} from "../../redux/actions/cart.js";
-import {addNewOrder} from "../../redux/actions/products.js";
+import {addNewOrder} from "../../redux/actions/orders.js";
 
 export default function OrderForm() {
   const cartArr = useSelector((state) => state.cart.cartArr);
