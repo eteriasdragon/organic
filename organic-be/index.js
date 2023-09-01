@@ -13,6 +13,10 @@ import {
   positionsRouter, productsRouter, reviewsRouter, statisticsRouter
 } from "./routes/index.js";
 import path from "path";
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const uri = `mongodb+srv://aethereal-dragon:QRNVUQeH0MhIQUFJ@cluster0.xlu38qm.mongodb.net/`;
@@ -49,11 +53,6 @@ async function startServer() {
     console.log(e);
   }
 }
-
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 app.use(express.static('../organic-fe/dist'));
 app.get('*', (req, res) => {
