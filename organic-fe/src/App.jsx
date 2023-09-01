@@ -23,7 +23,7 @@ function App() {
       <Route path="/cart" element={<Cart />}/>
       <Route path="/admin" element={<Admin />}/>
       <Route path="/shop" element={<Shop />}/>
-      <Route path="/news" element={<NewsSection />}/>
+      <Route path="/news-page" element={<NewsSection />}/>
       <Route path="/thank-you" element={<Thanks />} />
       <Route path="/error" element={<Error />} />
       <Route path="*" element={<Notfound />}/>

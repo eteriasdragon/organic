@@ -12,6 +12,7 @@ import {
   organicProsRouter,
   positionsRouter, productsRouter, reviewsRouter, statisticsRouter
 } from "./routes/index.js";
+import path from "path";
 
 const app = express();
 const uri = `mongodb+srv://aethereal-dragon:QRNVUQeH0MhIQUFJ@cluster0.xlu38qm.mongodb.net/`;
@@ -29,7 +30,6 @@ app.use('/products', productsRouter);
 app.use('/reviews', reviewsRouter);
 app.use('/statistics', statisticsRouter);
 
-app.use(express.static('../organic-fe/dist'));
 
 export const client = new MongoClient(uri, {
   serverApi: {
@@ -49,5 +49,15 @@ async function startServer() {
     console.log(e);
   }
 }
+
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+app.use(express.static('../organic-fe/dist'));
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../organic-fe/', 'dist', 'index.html'));
+});
 
 startServer()

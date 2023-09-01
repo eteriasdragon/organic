@@ -17,6 +17,6 @@ export const menuList = [
   },
   {
     title: "news",
-    url: "/news"
+    url: "/news-page"
   },
 ];

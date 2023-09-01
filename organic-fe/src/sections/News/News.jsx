@@ -12,7 +12,7 @@ export default function News () {
             <p className="news-section__subheading">News</p>
             <h3 className="news-section__heading">Discover weekly content about organic food, & more</h3>
           </div>
-          <Button style="default--white" text="More News" navLink="/news"/>
+          <Button style="default--white" text="More News" navLink="/news-page"/>
         </div>
         <div className="news-section__news-list">
           <NewsList amount={2}/>
