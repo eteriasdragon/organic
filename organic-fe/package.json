@@ -12,6 +12,7 @@
   "dependencies": {
     "export-xlsx": "^0.1.4",
     "formik": "^2.4.3",
+    "js-sha256": "^0.11.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-accessible-accordion": "^5.0.0",

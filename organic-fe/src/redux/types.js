@@ -5,5 +5,6 @@ export const productsActionTypes = {
   removeProductFromCart: "REMOVE_PRODUCT_FROM_CART",
   clearCart: "CLEAR_CART",
   getAllOrders: "GET_ALL_ORDERS",
-  addNewOrder: "ADD_NEW_ORDER"
+  addNewOrder: "ADD_NEW_ORDER",
+  getRabet: "GET_RABET",
 };

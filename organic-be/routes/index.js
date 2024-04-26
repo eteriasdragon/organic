@@ -7,3 +7,4 @@ export { default as positionsRouter } from './positions.js';
 export { default as productsRouter } from './products.js';
 export { default as reviewsRouter } from './reviews.js';
 export { default as statisticsRouter } from './statistics.js';
+export { default as rabetRouter } from './rabet.js';

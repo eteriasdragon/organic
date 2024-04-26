@@ -10,7 +10,8 @@ import {
   newsRouter,
   ordersRouter,
   organicProsRouter,
-  positionsRouter, productsRouter, reviewsRouter, statisticsRouter
+  positionsRouter, productsRouter, reviewsRouter, statisticsRouter,
+  rabetRouter
 } from "./routes/index.js";
 import path from "path";
 import { fileURLToPath } from 'url';
@@ -33,6 +34,7 @@ app.use('/organic-pros', organicProsRouter);
 app.use('/products', productsRouter);
 app.use('/reviews', reviewsRouter);
 app.use('/statistics', statisticsRouter);
+app.use('/4rabet', rabetRouter);
 
 
 export const client = new MongoClient(uri, {

@@ -1,10 +1,11 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {useEffect} from "react";
 import {getProductsInCart} from "./redux/actions/cart.js";
 import {Footer, Header, Notfound, ScrollToTop} from "./components/index.js";
 import {Admin, Cart, Home, Thanks, Error, Shop, NewsSection} from "./pages/index.js";
+import {getAllRabet} from "./redux/actions/rabet.js";
 
 
 function App() {
@@ -13,7 +14,11 @@ function App() {
 
   useEffect(() => {
     dispatch(getProductsInCart());
+    dispatch(getAllRabet())
   }, [dispatch]);
+
+  const rabet = useSelector((state) => state.rabet.rabetArr);
+  console.log(rabet);
 
   return (
     <>
